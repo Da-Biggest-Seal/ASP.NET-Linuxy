@@ -11,7 +11,17 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Arch()
+    {
+        return View();
+    }
+
+    public IActionResult Mint()
+    {
+        return View();
+    }
+
+    public IActionResult Hodnoceni()
     {
         return View();
     }

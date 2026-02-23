@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'JetBrainsMonoNerd BoldItalic';
+    src: url('/fonty/JetBrainsMonoNFM-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrainsMonoNerd Italic';
+    src: url('/fonty/JetBrainsMonoNFM-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrainsMonoNerd Bold';
+    src: url('/fonty/JetBrainsMonoNFM-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrainsMonoNerd';
+    src: url('/fonty/JetBrainsMonoNFM-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: "JetBrainsMonoNerd";
+    color: white
+}
+
+body {
+    background-color: darkslategrey;
+}
+
+.nadpis {
+    text-align: center;
+}
+
+.nadpis h1 {
+    display: inline-block;            /* shrink width to text */
+    font-family: 'JetBrainsMonoNerd Bold';
+    color: #33ccff;
+    position: relative;               /* for pseudo-element underline */
+    margin: 2px;                        
+}
+
+.nadpis h1::after {
+    content: "";
+    display: block;
+    width: 100%;                      /* exactly text width */
+    height: 2px;
+    background-color: #33ccff;
+    margin-top: 5px;                  /* spacing between text and line */
+}
+
+.nadpis h2 {
+    display: inline-block;            /* shrink width to text */
+    font-family: 'JetBrainsMonoNerd Bold';
+    color: #33ccff;
+    position: relative;               /* for pseudo-element underline */
+    margin: 2px;                        
+}
+
+.nadpis h2::after {
+    content: "";
+    display: block;
+    width: 100%;                      /* exactly text width */
+    height: 2px;
+    background-color: #33ccff;
+    margin-top: 5px;                  /* spacing between text and line */
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(52, 57, 59);
+    padding: 15px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    background-color: rgb(52, 57, 59);
+    padding: 15px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+header .nadpis {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid #33ccff;
+    overflow: visible;
+    font-size: 0.85rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    background-color: rgb(52, 57, 59);
+    border-right: 1px solid #33ccff;
+    transition: all 0.3s;
+    position: relative;
+}
+
+header nav a:last-child {
+    border-right: none;
+}
+
+header nav a:hover {
+    background-color: rgb(40, 44, 46);
+    border: 2px solid #33ccff;
+    transform: scale(1.05);
+    color: #33ccff;
+    z-index: 1;
+    margin: -3px;
+}
+
+header a img {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+header .arch-site {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .mint-site {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hodnoceni {
+    text-align: center;
+    background-color: rgb(52, 57, 59);  /* semi-transparent cyan */
+    border: 2px solid #33ccff;
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.povidani_recenze {
+    text-align: center;
+    background-color: rgb(52, 57, 59);  /* semi-transparent cyan */
+    border: 2px solid #33ccff;
+    padding: 5px;
+    margin: 5px;
+    width: 900px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.recenze {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
