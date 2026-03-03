@@ -1,86 +1,76 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linuxy</title>
-    <link rel="stylesheet" href="~/css/style.css">
-</head>
+@{
+    ViewData["Title"] = "Home";
+}
 
-<body>
+<div class="povidani">
+    <a> Existuje mnohem více distribucí, ale já psal jen o těch, se kterýma mám zkušenost</a><br>
+    <a>Když si kliknete na loga distribucí, dostanete se na stránku s ukázkou vzhledu a odkazem pro stažení</a>
+</div>
 
-  	<div class="povidani">
-        <a> Existuje mnohem více distribucí, ale já psal jen o těch, se kterýma mám zkušenost</a><br>
-        <a>Když si kliknete na loga distribucí, dostanete se na stránku s ukázkou vzhledu a odkazem pro stažení</a>
+<div class="arch">
+    <a href="/Home/Arch"><img src="~/obrazky/arch_logo.png" height="350px" title="Stránka s obrázky Arch linuxu"></a>
+
+    <div class="text-arch">
+        <h2>Arch linux</h2>
+
+        <ul>
+            <li>Minimalistická, flexibilní, user oriented distribuce</li>
+            <li>Důraz na jednoduchost, aktuálnost a plnou kontrolu nad systémem</li>
+            <li>Určen především zkušenějším uživatelům</li>
+            <li>Uživatel si celý systém instaluje sám za pomocí příkazů</li>
+
+        </ul>
     </div>
+</div>
 
-    <div class="arch">
-        <a href="/Home/Arch"><img src="~/obrazky/arch_logo.png" height="350px" title="Stránka s obrázky Arch linuxu"></a>
+<br>
 
-        <div class="text-arch">
-            <h2>Arch linux</h2>
+<div class="mint">
+    <a href="/Home/Mint"><img src="~/obrazky/Linux_Mint_logo.png" height="350px" title="Stránka s obrázky Linuxu Mint"></a>
 
-            <ul>
-                <li>Minimalistická, flexibilní, user oriented distribuce</li>
-                <li>Důraz na jednoduchost, aktuálnost a plnou kontrolu nad systémem</li>
-                <li>Určen především zkušenějším uživatelům</li>
-                <li>Uživatel si celý systém instaluje sám za pomocí příkazů</li>
-
-            </ul>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="mint">
-        <a href="/Home/Mint"><img src="~/obrazky/Linux_Mint_logo.png" height="350px" title="Stránka s obrázky Linuxu Mint"></a>
-    
-        <div class="text-mint">
-            <h2>Linux Mint</h2>
-            
-            <ul>
-                <li>Přívětivá a uživatelsky orientovaná distribuce</li>
-                <li>Důraz na jednoduché používání a stabilitu systému</li>
-                <li>Ideální pro začátečníky i pro ty, kteří chtějí “fungující systém hned”</li>
-                <li>Přichází s předinstalovaným grafickým prostředím a základními aplikacemi</li>
-                <li>Silná komunita a pravidelné aktualizace zajišťují bezpečnost a podporu</li>
-            </ul>
-
-        </div>
-    
-    </div>
-
-    <div class="nadpis">
-        <h2>Porovnání Distribucí</h2>
-    </div>
-
-    <div class="povidani">
-        <a>Každá distribuce je v něčem jiná, zde je tabulka v čem je jaká distribuce lepší</a>
-    </div>
-
-    <div class="comp_tabulka">
-        <table>
-            <th>Název distribuce</th> <th>Jednoduchost instalace</th> <th>Používání</th> <th>Customizace</th>
-            <tr>
-                <td><img src="~/obrazky/arch_logo.png" height="16px">rch</td> <td>2/5</td> <td>5/5</td> <td>5/5</td>
-            </tr>
-            <tr>
-                <td><img src="~/obrazky/Linux_Mint_logo.png" height="16px">Mint</td> <td>4/5</td> <td>4/5</td> <td>4/5</td>
-            </tr>
-            <tr>
-                <td>Windows</td> <td>3/5</td> <td>2/5</td> <td>1/5</td>
-            </tr>
-            <tr>
-                <td>Lepší?</td> <td>Mint</td> <td>Arch</td> <td>Arch</td>
-            </tr>
-
-        </table>
-
-        <div class="poznamka">
-            <p>5 je nejlepší, 1 je nejhorší</p>
-        </div>
+    <div class="text-mint">
+        <h2>Linux Mint</h2>
+        
+        <ul>
+            <li>Přívětivá a uživatelsky orientovaná distribuce</li>
+            <li>Důraz na jednoduché používání a stabilitu systému</li>
+            <li>Ideální pro začátečníky i pro ty, kteří chtějí “fungující systém hned”</li>
+            <li>Přichází s předinstalovaným grafickým prostředím a základními aplikacemi</li>
+            <li>Silná komunita a pravidelné aktualizace zajišťují bezpečnost a podporu</li>
+        </ul>
 
     </div>
 
-</body>
-</html>
+</div>
+
+<div class="nadpis">
+    <h2>Porovnání Distribucí</h2>
+</div>
+
+<div class="povidani">
+    <a>Každá distribuce je v něčem jiná, zde je tabulka v čem je jaká distribuce lepší</a>
+</div>
+
+<div class="comp_tabulka">
+    <table>
+        <th>Název distribuce</th> <th>Jednoduchost instalace</th> <th>Používání</th> <th>Customizace</th>
+        <tr>
+            <td><img src="~/obrazky/arch_logo.png" height="16px">rch</td> <td>2/5</td> <td>5/5</td> <td>5/5</td>
+        </tr>
+        <tr>
+            <td><img src="~/obrazky/Linux_Mint_logo.png" height="16px">Mint</td> <td>4/5</td> <td>4/5</td> <td>4/5</td>
+        </tr>
+        <tr>
+            <td>Windows</td> <td>3/5</td> <td>2/5</td> <td>1/5</td>
+        </tr>
+        <tr>
+            <td>Lepší?</td> <td>Mint</td> <td>Arch</td> <td>Arch</td>
+        </tr>
+
+    </table>
+
+    <div class="poznamka">
+        <p>5 je nejlepší, 1 je nejhorší</p>
+    </div>
+
+</div>

@@ -6,8 +6,28 @@
     <title>@ViewData["Title"] - Linuxy</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/Linuxy.styles.css" asp-append-version="true"/>
+    
+    @if (ViewData["Title"].ToString() == "Home")
+    {
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
+    }
+    
+    @if (ViewData["Title"].ToString() == "Arch")
+    {
+        <link rel="stylesheet" href="~/css/arch-style.css" asp-append-version="true"/>
+    }
+    
+    @if (ViewData["Title"].ToString() == "Mint")
+    {
+        <link rel="stylesheet" href="~/css/mint-style.css" asp-append-version="true"/>
+    }
+    
+    @if (ViewData["Title"].ToString() == "Hodnocení")
+    {
+        <link rel="stylesheet" href="~/css/recenze.css" asp-append-version="true"/>
+    }
+    
+    <link rel="stylesheet" href="~/css/Linuxy.styles.css" asp-append-version="true"/>
 </head>
 
 <header>
