@@ -4,7 +4,12 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<form>
+@if (ViewData["error"] != null)
+{
+    <p style="color:red">Error: @ViewData["error"]</p>
+}
+
+<form action="/User/Signin" method="post">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username"><br>
 
@@ -12,7 +17,7 @@
     <input type="password" id="password" name="password"><br>
     
     <label for="password">Repeat password:</label><br>
-    <input type="password" id="password" name="password"><br><br>
+    <input type="password" id="check_password" name="checkPassword"><br><br>
 
-    <input type="submit" value="Login">
+    <input type="submit" value="Signin">
 </form>

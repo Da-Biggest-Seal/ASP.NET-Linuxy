@@ -16,7 +16,54 @@ public class UserController : Controller
         return View();
     }
     
+    [HttpPost]
+    public IActionResult Login(string username, string password)
+    {
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        {
+            ViewData["error"] = "Není zadán username a password";
+            
+            return View();
+        }
+        
+        /*
+        else if (password != )
+
+        {
+            ViewData["error"] = "Hesla se neschodují";
+            return View();
+        }
+        */
+        
+        else return View();
+    }
+    
+    [HttpPost]
+    public IActionResult Signin(string username, string password, string checkPassword)
+    {
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        {
+            ViewData["error"] = "Není zadán username a password";
+            
+            return View();
+        }
+        
+        else if (password != checkPassword)
+
+        {
+            ViewData["error"] = "Hesla se neschodují";
+            return View();
+        }
+        
+        else return View();
+    }
+    
     public IActionResult AfterLogin()
+    {
+        return View();
+    }
+    
+    public IActionResult Main()
     {
         return View();
     }
