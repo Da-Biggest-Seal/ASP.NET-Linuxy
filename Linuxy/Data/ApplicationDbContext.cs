@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Linuxy.Models;
+﻿using _06_AspNetCore.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Linuxy.Data
 {

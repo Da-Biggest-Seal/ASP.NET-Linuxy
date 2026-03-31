@@ -1,11 +1,20 @@
 ﻿using System.Diagnostics;
+using _06_AspNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Linuxy.Models;
+using Linuxy.Data;
 
 namespace Linuxy.Controllers;
 
 public class UserController : Controller
 {
+    private readonly ApplicationDbContext _db;
+
+    public UserController(ApplicationDbContext db)
+    {
+        _db = db;
+    }
+    
     [HttpGet]
     public IActionResult Login()
     {
@@ -57,7 +66,13 @@ public class UserController : Controller
             return View();
         }
         
-        else return Redirect("/User/Login");
+        else
+        {
+            _db.Users.Add(new User() { Username = username, Password = password });
+            _db.SaveChanges();
+            
+            return Redirect("/User/Login");
+        }
     }
     
     
