@@ -1,5 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Sign In";
+    
+    if (!string.IsNullOrEmpty(ViewData["error"]?.ToString()))
+    {
+        <span class="error">@ViewData["error"]</span>
+    }
 }
 
 <h2>@ViewData["Title"]</h2>

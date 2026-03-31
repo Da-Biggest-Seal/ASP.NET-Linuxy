@@ -6,11 +6,13 @@ namespace Linuxy.Controllers;
 
 public class UserController : Controller
 {
+    [HttpGet]
     public IActionResult Login()
     {
         return View();
     }
     
+    [HttpGet]
     public IActionResult Signin()
     {
         return View();
@@ -55,8 +57,9 @@ public class UserController : Controller
             return View();
         }
         
-        else return View();
+        else return Redirect("/User/Login");
     }
+    
     
     public IActionResult AfterLogin()
     {
