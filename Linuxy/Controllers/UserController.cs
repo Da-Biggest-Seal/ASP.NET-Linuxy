@@ -37,16 +37,26 @@ public class UserController : Controller
             return View();
         }
         
-        /*
-        else if (password != )
-
+        User? prihlasenyUzivatel = _db
+            .Users
+            .Where(u => u.Username == username)
+            .FirstOrDefault();
+        
+        if(prihlasenyUzivatel == null)
         {
-            ViewData["error"] = "Hesla se neschodují";
+            ViewData["chyba"] = "Neznámý uživatel.";
+
             return View();
         }
-        */
         
-        else return View();
+        if(prihlasenyUzivatel.Password != password)
+        {
+            ViewData["chyba"] = "Chybné heslo.";
+
+            return View();
+        }
+
+        return Redirect("/User/AfterLogin");
     }
     
     [HttpPost]
@@ -66,13 +76,10 @@ public class UserController : Controller
             return View();
         }
         
-        else
-        {
-            _db.Users.Add(new User() { Username = username, Password = password });
-            _db.SaveChanges();
-            
-            return Redirect("/User/Login");
-        }
+        _db.Users.Add(new User() { Username = username, Password = password });
+        _db.SaveChanges();
+
+        return Redirect("/User/Login");
     }
     
     
